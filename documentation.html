@@ -128,20 +128,17 @@
             cursor: pointer;
         }
         #navbar ul{
-            position: relative;
             overflow-y: auto;
             overflow-x: hidden;
-            height: 88%;
+            height: 90%;
             margin-top: 15px;
         }
         #navbar li{
             width: 100%;
-            position: relative;
             border-top: 1px solid;
         }
         #main-doc{
             margin-left: 310px;
-            position: absolute;
             padding: 20px;
             margin-bottom: 110px;
         }
@@ -169,6 +166,54 @@
             width: 91%;
             line-height:1.5 ;
         }
+        @media only screen and (max-width: 1000px){
+            .main-section code{
+                width: 85%;
+            }
+        }
+        @media only screen and (max-width: 850px){
+            body{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            #navbar{
+                position: static;
+                width: 100%;
+                height:300px;
+            }
+            #navbar ul{
+                border-top: 4px solid #99A1A1;
+                border-bottom: 4px solid #99A1A1;
+            }
+            #main-doc{
+                margin: 35px 5px 110px;
+            }
+        }
+        @media only screen and (max-width: 440px){
+        #main-doc{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 30px;
+            }
+            .main-section {
+                width: 88%;
+            }
+            .main-section li{
+                margin-bottom: 20px;
+            }
+            .main-section article{
+                margin:0;
+            }
+            .main-section ul{
+                margin:0;
+            }
+            .main-section code{
+                margin: 0;
+                width: 87%;
+            }   
+        }
     </style>
 </head>
 <body>
@@ -177,7 +222,7 @@
         <ul>
             <li><a class="nav-link" href="#introduction">Introduction</a></li>
             <li><a class="nav-link" href="#what-you-should-already-know">What you should already know</a></li>
-            <li><a class="nav-link" href="#javascript-and-java">HavaScript and Java</a></li>
+            <li><a class="nav-link" href="#javascript-and-java">JavaScript and Java</a></li>
             <li><a class="nav-link" href="#hello-world">Hello world</a></li>
             <li><a class="nav-link" href="#variables">Variables</a></li>
             <li><a class="nav-link" href="#declaring-variables">Declaring variables</a></li>
@@ -351,7 +396,7 @@
                 <ul>
                     <li>The name of the function.</li>
                     <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
-                    <li><The JavaScript statements that define the function, enclosed in curly brackets, { }./li>
+                    <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
                 </ul>
                 <p>For example, the following code defines a simple function named square:</p>
                 <code>function square(number) { return number * number; }</code>
